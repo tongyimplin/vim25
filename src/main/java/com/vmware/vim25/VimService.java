@@ -1,7 +1,5 @@
 package com.vmware.vim25;
 
-import com.vmware.vim25.VimPortType;
-import com.vmware.vim25.VimService;
 import java.net.URL;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
@@ -10,7 +8,7 @@ import javax.xml.ws.WebServiceClient;
 import javax.xml.ws.WebServiceException;
 import javax.xml.ws.WebServiceFeature;
 
-@WebServiceClient(name = "VimService", targetNamespace = "urn:vim25Service", wsdlLocation = "vimService.wsdl")
+@WebServiceClient(name = "VimService", targetNamespace = "urn:vim25Service", wsdlLocation = "com/vmware/vim25/vimService.wsdl")
 public class VimService extends Service {
   private static final URL VIMSERVICE_WSDL_LOCATION;
   
@@ -59,7 +57,7 @@ public class VimService extends Service {
   }
   
   static {
-    VIMSERVICE_WSDL_LOCATION = VimService.class.getResource("vimService.wsdl");
+    VIMSERVICE_WSDL_LOCATION = VimService.class.getResource("com/vmware/vim25/vimService.wsdl");
     WebServiceException webServiceException = null;
     if (VIMSERVICE_WSDL_LOCATION == null)
       webServiceException = new WebServiceException("Cannot find 'vimService.wsdl' wsdl. Place the resource correctly in the classpath."); 
