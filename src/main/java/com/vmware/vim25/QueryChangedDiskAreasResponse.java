@@ -1,0 +1,25 @@
+package com.vmware.vim25;
+
+import com.vmware.vim25.DiskChangeInfo;
+import com.vmware.vim25.QueryChangedDiskAreasResponse;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "", propOrder = {"returnval"})
+@XmlRootElement(name = "QueryChangedDiskAreasResponse")
+public class QueryChangedDiskAreasResponse {
+  @XmlElement(required = true)
+  protected DiskChangeInfo returnval;
+  
+  public DiskChangeInfo getReturnval() {
+    return this.returnval;
+  }
+  
+  public void setReturnval(DiskChangeInfo paramDiskChangeInfo) {
+    this.returnval = paramDiskChangeInfo;
+  }
+}

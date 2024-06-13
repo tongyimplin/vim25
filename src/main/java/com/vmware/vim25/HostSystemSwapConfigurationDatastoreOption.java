@@ -1,0 +1,23 @@
+package com.vmware.vim25;
+
+import com.vmware.vim25.HostSystemSwapConfigurationDatastoreOption;
+import com.vmware.vim25.HostSystemSwapConfigurationSystemSwapOption;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "HostSystemSwapConfigurationDatastoreOption", propOrder = {"datastore"})
+public class HostSystemSwapConfigurationDatastoreOption extends HostSystemSwapConfigurationSystemSwapOption {
+  @XmlElement(required = true)
+  protected String datastore;
+  
+  public String getDatastore() {
+    return this.datastore;
+  }
+  
+  public void setDatastore(String paramString) {
+    this.datastore = paramString;
+  }
+}

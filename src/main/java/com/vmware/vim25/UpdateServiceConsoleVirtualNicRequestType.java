@@ -1,0 +1,46 @@
+package com.vmware.vim25;
+
+import com.vmware.vim25.HostVirtualNicSpec;
+import com.vmware.vim25.ManagedObjectReference;
+import com.vmware.vim25.UpdateServiceConsoleVirtualNicRequestType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "UpdateServiceConsoleVirtualNicRequestType", propOrder = {"_this", "device", "nic"})
+public class UpdateServiceConsoleVirtualNicRequestType {
+  @XmlElement(required = true)
+  protected ManagedObjectReference _this;
+  
+  @XmlElement(required = true)
+  protected String device;
+  
+  @XmlElement(required = true)
+  protected HostVirtualNicSpec nic;
+  
+  public ManagedObjectReference getThis() {
+    return this._this;
+  }
+  
+  public void setThis(ManagedObjectReference paramManagedObjectReference) {
+    this._this = paramManagedObjectReference;
+  }
+  
+  public String getDevice() {
+    return this.device;
+  }
+  
+  public void setDevice(String paramString) {
+    this.device = paramString;
+  }
+  
+  public HostVirtualNicSpec getNic() {
+    return this.nic;
+  }
+  
+  public void setNic(HostVirtualNicSpec paramHostVirtualNicSpec) {
+    this.nic = paramHostVirtualNicSpec;
+  }
+}
